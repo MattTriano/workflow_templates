@@ -34,10 +34,12 @@ docker exec -it docker_composed_python_cli bash
 docker exec -it 4a88c6159cdf bash
 ```
 
+This will give you a bash terminal within the container, and using the command below, you can get data and persist it to the volume specified in the `docker-compose.yml` file.
 
 ```bash
 python scripts/get_metadata.py -t "ewy2-6yfk" -o data_raw/
 ```
 
+## Security
 
-I'm having a bit of trouble with this last step, in that the container's `app_user` doesn't seem to have permission to write to the volume. I still have to debug that. I suspect I'll have to do some permission-granting host-side.
+At present, this is for non-prod use only.

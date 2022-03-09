@@ -5,7 +5,7 @@ services:
     image: socrata/python_cli
     container_name: docker_composed_python_cli
     volumes:
-      - ./data_raw:/home/app_user/data_raw
+      - ./data_raw:/app/data_raw
     restart: "no"
     stdin_open: true
     tty: true
