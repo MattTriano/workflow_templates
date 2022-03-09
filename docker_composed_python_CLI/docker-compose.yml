@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  socrata:
+    build: images/socrata
+    image: socrata/python_cli
+    container_name: docker_composed_python_cli
+    volumes:
+      - ./data_raw:/app/data_raw
+    restart: "no"
+    stdin_open: true
+    tty: true
